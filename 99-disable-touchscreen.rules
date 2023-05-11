@@ -1,0 +1,8 @@
+# ATTRS name from /proc/bus/input/devices
+
+SUBSYSTEM=="input", ATTRS{name}=="NTRG0001:01 1B96:1B05 Touchscreen", ATTR{authorized}="0", RUN+="/usr/local/sbin/remove-dev.sh '%E{DEVNAME}'"
+
+# After changing, run:
+#  udevadm control --reload-rules
+#  udevadm trigger
+
